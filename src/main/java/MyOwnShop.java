@@ -78,7 +78,41 @@ public class MyOwnShop {
     private static void Competidores() {
     }
 
-    private static void DatosDelProducto() {
+    private static void DatosDelProducto()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Elige qué productos quieres visualizar");
+        System.out.println("[1] Más vendidos");
+        System.out.println("[2] Menos vendidos");
+        System.out.println("[3] Estables");
+        int elegProd = sc.nextInt();
+
+        switch (elegProd){
+            case 1:
+                MasVendidos();
+                break;
+            case 2:
+                MenosVendidos();
+                break;
+            case 3:
+                Estables();
+                break;
+            default:
+                System.out.println("Ingresa opciones válidas");
+                break;
+        }
+    }
+
+    private static void Estables() {
+        System.out.println("Mostrando productos estables...");
+    }
+
+    private static void MenosVendidos() {
+        System.out.println("Mostrando productos menos vendidos...");
+    }
+
+    private static void MasVendidos() {
+        System.out.println("Mostrando productos más vendidos...");
     }
 
     private static void ReportaVentas() {
