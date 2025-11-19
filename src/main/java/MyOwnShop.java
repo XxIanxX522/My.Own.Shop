@@ -100,13 +100,17 @@ public class  MyOwnShop {
     {
         Scanner sc = new Scanner(System.in);
         int ComPre;
+        int MyPre;
         int[] PrecCom = new int[100];
+        int[] PrecMY = new int[100];
         int CONT = 0;
         int otroprec;
         do {
             System.out.println("ingresa el precio del producto de tu competidor");
             ComPre = sc.nextInt();
-            PrecCom[CONT] = ComPre;
+            System.out.println("ingresa el precio de tu producto ");
+            MyPre = sc.nextInt();
+            PrecCom[CONT] = ComPre - MyPre;
             CONT++;
             System.out.println("deseas ingresar otro precio\n1. si\n2.no");
             otroprec = sc.nextInt();
@@ -114,10 +118,10 @@ public class  MyOwnShop {
            }while(otroprec ==1);
         for (int h = 0; h < CONT; h++)
         {
-            System.out.println(PrecCom[h]);
+            System.out.println("la diferencia que hay entre tu precio y el de tu competidor es de $"+PrecCom[h]+ " pesos");
 
         }
-
+          Estadisticas();
 
 
     }
