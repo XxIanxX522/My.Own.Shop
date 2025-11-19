@@ -1,4 +1,5 @@
 import java.io.*;
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 public class MyOwnShop {
@@ -49,6 +50,60 @@ public class MyOwnShop {
         while ( Log == 0 ){
             LoginBasico();
         }
+        Scanner sc = new Scanner(System.in);
+        int seleccion=0;
+        System.out.println("¿A dónde quieres ir?");
+        System.out.println("[1] Reporte de ventas.");
+        System.out.println("[2] Datos del producto.");
+        System.out.println("[3] Competidores.");
+        seleccion = sc.nextInt();
+        sc.nextLine();
+        switch (seleccion) {
+            case 1:
+                ReportaVentas();
+                break;
+            case 2:
+                DatosDelProducto();
+                break;
+            case 3:
+                Competidores();
+                break;
+            default:
+                System.out.println("Elige una opción correcta");
+                break;
+        }
+            
+    }
+
+    private static void Competidores() {
+    }
+
+    private static void DatosDelProducto() {
+    }
+
+    private static void ReportaVentas() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("¿En qué rango de tiempo deseas ver?");
+        System.out.println("[1] Semanal");
+        System.out.println("[2] Mensual");
+        int opcDeTiempo = 0;
+        sc.nextLine();
+        switch (opcDeTiempo){
+            case 1:
+                ReporteSemanal();
+                break;
+            case 2:
+                ReporteMensual();
+                break;
+            default:
+                System.out.println("Ingresa opciones válidas.");
+        }
+    }
+
+    private static void ReporteMensual() {
+    }
+
+    private static void ReporteSemanal() {
     }
 
     private static void Ventas() {
@@ -152,7 +207,8 @@ public class MyOwnShop {
         }
     }
 
-    private static void GestionarInventario() {
+    private static void GestionarInventario() 
+    {
 
     }
 
@@ -209,7 +265,8 @@ public class MyOwnShop {
             }
             i++;
         }
-        for ( int k = 0; k < i; k++){
+        for ( int k = 0; k < i; k++)
+        {
             System.out.println(producto[k]);
         }
         guardararchivo();
@@ -227,6 +284,7 @@ public class MyOwnShop {
         if (usuario.equals(usuarioCorrecto) && pass.equals(passwordCorrecta)) {
             System.out.println("Acceso permitido.");
             Log = 1;
+            
         }
         else {
             System.out.println("Usuario o contraseña incorrectos.");
