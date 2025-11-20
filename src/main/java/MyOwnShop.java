@@ -57,29 +57,31 @@ public class  MyOwnShop {
         }
         Scanner sc = new Scanner(System.in);
         int seleccion=0;
-        System.out.println("¿A dónde quieres ir?");
-        System.out.println("[1] Reporte de ventas.");
-        System.out.println("[2] Datos del producto.");
-        System.out.println("[3] Competidores.");
-        System.out.println("[4] Salir.");
-        seleccion = sc.nextInt();
-        sc.nextLine();
-        switch (seleccion) {
-            case 1:
-                ReportaVentas();
-                break;
-            case 2:
-                DatosDelProducto();
-                break;
-            case 3:
-                Competidores();
-                break;
-            case 4:
-                System.out.println("Saliendo.....");
-                break;
-            default:
-                System.out.println("Elige una opción correcta.");
-                break;
+        while ( seleccion != 4) {
+            System.out.println("¿A dónde quieres ir?");
+            System.out.println("[1] Reporte de ventas.");
+            System.out.println("[2] Datos del producto.");
+            System.out.println("[3] Competidores.");
+            System.out.println("[4] Salir.");
+            seleccion = sc.nextInt();
+            sc.nextLine();
+            switch (seleccion) {
+                case 1:
+                    ReportaVentas();
+                    break;
+                case 2:
+                    DatosDelProducto();
+                    break;
+                case 3:
+                    Competidores();
+                    break;
+                case 4:
+                    System.out.println("Saliendo.....");
+                    break;
+                default:
+                    System.out.println("Elige una opción correcta.");
+                    break;
+            }
         }
     }
 
@@ -125,25 +127,28 @@ public class  MyOwnShop {
 
     private static void DatosDelProducto()
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Elige qué productos quieres visualizar");
-        System.out.println("[1] Más vendidos");
-        System.out.println("[2] Menos vendidos");
-        System.out.println("[3] Regresar");
-        int elegProd = sc.nextInt();
+        int elegProd = 0;
+        while ( elegProd != 3) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Elige qué productos quieres visualizar");
+            System.out.println("[1] Más vendidos");
+            System.out.println("[2] Menos vendidos");
+            System.out.println("[3] Regresar");
+            elegProd = sc.nextInt();
 
-        switch (elegProd){
-            case 1:
-                MasVendidos();
-                break;
-            case 2:
-                MenosVendidos();
-                break;
+            switch (elegProd) {
+                case 1:
+                    MasVendidos();
+                    break;
+                case 2:
+                    MenosVendidos();
+                    break;
                 case 3:
-                 Estadisticas();
-            default:
-                System.out.println("Ingresa opciones válidas");
-                break;
+                    Estadisticas();
+                default:
+                    System.out.println("Ingresa opciones válidas");
+                    break;
+            }
         }
     }
 
@@ -157,20 +162,24 @@ public class  MyOwnShop {
 
     private static void ReportaVentas() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("¿En qué rango de tiempo deseas ver?");
-        System.out.println("[1] Semanal");
-        System.out.println("[2] Mensual");
         int opcDeTiempo = 0;
-        sc.nextLine();
-        switch (opcDeTiempo){
-            case 1:
-                ReporteSemanal();
-                break;
-            case 2:
-                ReporteMensual();
-                break;
-            default:
-                System.out.println("Ingresa opciones válidas.");
+        while ( opcDeTiempo != 3) {
+            System.out.println("¿En qué rango de tiempo deseas ver?");
+            System.out.println("[1] Semanal");
+            System.out.println("[2] Mensual");
+            System.out.println("[3] Salir");
+            opcDeTiempo = sc.nextInt();
+            sc.nextLine();
+            switch (opcDeTiempo) {
+                case 1:
+                    ReporteSemanal();
+                    break;
+                case 2:
+                    ReporteMensual();
+                    break;
+                default:
+                    System.out.println("Ingresa opciones válidas.");
+            }
         }
     }
 
