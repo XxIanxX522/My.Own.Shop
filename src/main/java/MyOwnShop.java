@@ -367,7 +367,7 @@ public class  MyOwnShop {
                 PrecProd[i] = sc.nextInt();
                 sc.nextLine();
                 PSug[i] = (double) (PrecProd[i] + (PrecProd[i] * 0.30));
-                System.out.println("Ingresa el número existencias del producto: ");
+                System.out.println("Ingresa el número de existencias del producto: ");
                 ExistProd[i] = sc.nextInt();
                 sc.nextLine();
                 producto[i] = "Código: " + i + " | " + "Nombre: " + NomProd[i] + " | " + "Precio: " + PrecProd[i] + " | " + "Cantidad: " + ExistProd[i] + " | " + "Precio sugerido: " + PSug[i];
