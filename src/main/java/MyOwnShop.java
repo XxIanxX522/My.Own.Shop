@@ -61,6 +61,8 @@ public class  MyOwnShop {
         System.out.println("[1] Reporte de ventas.");
         System.out.println("[2] Datos del producto.");
         System.out.println("[3] Competidores.");
+        System.out.println("[4] Salir.");
+
         seleccion = sc.nextInt();
         sc.nextLine();
         switch (seleccion) {
@@ -72,6 +74,9 @@ public class  MyOwnShop {
                 break;
             case 3:
                 Competidores();
+                break;
+            case 4:
+                System.out.println("Saliendo.....");
                 break;
             default:
                 System.out.println("Elige una opción correcta");
@@ -133,6 +138,7 @@ public class  MyOwnShop {
         System.out.println("[1] Más vendidos");
         System.out.println("[2] Menos vendidos");
         System.out.println("[3] Estables");
+        System.out.println("[4] Regresar");
         int elegProd = sc.nextInt();
 
         switch (elegProd){
@@ -145,6 +151,8 @@ public class  MyOwnShop {
             case 3:
                 Estables();
                 break;
+            case 4:
+                 Estadisticas();
             default:
                 System.out.println("Ingresa opciones válidas");
                 break;
