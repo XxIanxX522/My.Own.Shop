@@ -148,10 +148,7 @@ public class  MyOwnShop {
             case 2:
                 MenosVendidos();
                 break;
-            case 3:
-                Estables();
-                break;
-            case 4:
+                case 3:
                  Estadisticas();
             default:
                 System.out.println("Ingresa opciones válidas");
@@ -159,9 +156,7 @@ public class  MyOwnShop {
         }
     }
 
-    private static void Estables() {
-        System.out.println("Mostrando productos estables...");
-    }
+
 
     private static void MenosVendidos() {
         System.out.println("Mostrando productos menos vendidos...");
@@ -252,7 +247,7 @@ public class  MyOwnShop {
             System.out.println("Por favor ingresa el nombre del producto vendido:");
             Scanner scanner = new Scanner(System.in);
             NomProduc = scanner.next();
-            System.out.println("ingresa el precio del producto vendido:");
+            System.out.println("Ingresa el precio del producto vendido:");
             PrecProduc = scanner.nextDouble();
             scanner.nextLine();
             System.out.println("¿deseas ingresar otro producto?\n1. si\n2. no");
