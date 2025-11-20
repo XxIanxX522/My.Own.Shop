@@ -152,8 +152,10 @@ public class  MyOwnShop {
         }
     }
 
-    private static void MenosVendidos() {
-        System.out.println("Mostrando productos menos vendidos...");
+    private static void MenosVendidos()
+    {
+        System.out.println("Elegir que productos quieres ver 1.");
+
     }
 
     private static void MasVendidos() {
@@ -418,6 +420,24 @@ public class  MyOwnShop {
         }
         else {
             System.out.println("Usuario o contraseña incorrectos.");
+            System.out.println("¿Deseas salir?\n[1] Sí\n[2] No\"");
+            Scanner scanner = new Scanner(System.in);
+            int z;
+            z= scanner.nextInt();
+            switch (z)
+
+            {
+                case 1:
+                    break;
+                case 2:
+                    LoginBasico();
+                default:
+                    break;
+
+            }
+
+
+
         }
     }
 
