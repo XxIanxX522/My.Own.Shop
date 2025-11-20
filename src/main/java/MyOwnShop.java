@@ -78,7 +78,7 @@ public class  MyOwnShop {
                 System.out.println("Saliendo.....");
                 break;
             default:
-                System.out.println("Elige una opción correcta");
+                System.out.println("Elige una opción correcta.");
                 break;
         }
     }
@@ -88,7 +88,7 @@ public class  MyOwnShop {
         Scanner sc = new Scanner(System.in);
         int seleccionado;
         System.out.println("¿Deseas comparar los precios de los competidores con los tuyos?");
-        System.out.println("1. si\n2. no" );
+        System.out.println("1. Sí\n2. No" );
         seleccionado = sc.nextInt();
         sc.nextLine();
         if (seleccionado == 1)
@@ -109,16 +109,16 @@ public class  MyOwnShop {
         do {
             System.out.println("ingresa el precio del producto de tu competidor");
             ComPre = sc.nextInt();
-            System.out.println("ingresa el precio de tu producto ");
+            System.out.println("Ingresa el precio de tu producto ");
             MyPre = sc.nextInt();
             PrecCom[CONT] = ComPre - MyPre;
             CONT++;
-            System.out.println("deseas ingresar otro precio\n1. si\n2.no");
+            System.out.println("¿Deseas ingresar otro precio?\n1. Sí\n2.No");
             otroprec = sc.nextInt();
            }while(otroprec ==1);
         for (int h = 0; h < CONT; h++)
         {
-            System.out.println("la diferencia que hay entre tu precio y el de tu competidor es de $"+PrecCom[h]+ " pesos");
+            System.out.println("La diferencia que hay entre tu precio y el de tu competidor es de $"+PrecCom[h]+ " pesos");
         }
           Estadisticas();
     }
@@ -129,8 +129,7 @@ public class  MyOwnShop {
         System.out.println("Elige qué productos quieres visualizar");
         System.out.println("[1] Más vendidos");
         System.out.println("[2] Menos vendidos");
-        System.out.println("[3] Estables");
-        System.out.println("[4] Regresar");
+        System.out.println("[3] Regresar");
         int elegProd = sc.nextInt();
 
         switch (elegProd){
@@ -179,13 +178,13 @@ public class  MyOwnShop {
 
     private static void ReporteMensual()
     {
-        System.out.println("filtrando ventas Mensuales");
+        System.out.println("Filtrando ventas Mensuales");
 
     }
 
     private static void ReporteSemanal()
     {
-        System.out.println("filtrando ventas Semanales");
+        System.out.println("Filtrando ventas Semanales");
 
     }
 
@@ -316,6 +315,7 @@ public class  MyOwnShop {
             default:
                 break;
         }
+        guardararchivo();
     }
 
     private static void EliminarProductos() {
