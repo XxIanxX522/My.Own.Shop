@@ -209,6 +209,7 @@ public class  MyOwnShop {
             TotalVenta += ventasemanal[vent];
             vent++;
         }
+        System.out.println( "La venta semanal del producto: " + NomProd [ codigo ] + " es de: " + TotalVenta);
     }
 
     private static void ReporteSemanal() {
